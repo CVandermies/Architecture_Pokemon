@@ -62,12 +62,12 @@ La documentation sera faite en commentaire dans le code et dans ce fichier READM
 Ceci n’est pas encore défini mais le sera dès que nous aurons entamé la réalisation du code. 
 
 Mathias :  
-
-... 
+- Combats (Fight)
+- Implémentation des règles du jeu (ConcreteType, TypeBuilder)
 
 Charles :  
-
-... 
+- Build des pokemons (ConcretePokemon, PokemonBuilder, Stats)
+- Tests
 
  
 
