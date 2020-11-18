@@ -1,4 +1,4 @@
-package pokemon;
+package com.company;
 
 import java.util.HashMap;
 
