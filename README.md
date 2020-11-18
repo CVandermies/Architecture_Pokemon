@@ -15,7 +15,7 @@ Basée sur le modèle Builder (design pattern) l'application permettra de créer
 
 L’application sera un jeu textuel accessible via les lignes de commande. 
 
- 
+
 
 ## Contraintes 
 
@@ -29,7 +29,17 @@ Le développement du jeu suivra une stratégie MVP “Minimum Viable Product”.
 
 La documentation sera faite en commentaire dans le code et dans ce fichier README (qui sera amené à évoluer). 
 
- 
+### Diagramme
+
+Application basée sur le design pattern builder.
+
+![alt text](https://github.com/CVandermies/Architecture_Pokemon/blob/master/docs/diagram.jpg?raw=true)
+
+### Tableau des types
+
+Le type du Pokemon, ses forces et faiblesses seront basées sur ce tableau de la première génération (15 types) :
+
+![alt text](https://github.com/CVandermies/Architecture_Pokemon/blob/master/docs/TypeAffinities.png?raw=true)
 
 ## Critères de qualité 
 
@@ -58,8 +68,6 @@ La documentation sera faite en commentaire dans le code et dans ce fichier READM
  
 
 ## Répartition 
-
-Ceci n’est pas encore défini mais le sera dès que nous aurons entamé la réalisation du code. 
 
 Mathias :  
 - Combats (Fight)
