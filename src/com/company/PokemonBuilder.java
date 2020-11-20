@@ -7,6 +7,7 @@ abstract class PokemonBuilder {
     public static ConcretePokemon createPokemon(){
         Scanner myObj = new Scanner(System.in);
         String pokemonName;
+        String pokemonType;
         int pokemonHp;
         int pokemonAtk;
         int pokemonDef;
@@ -14,6 +15,9 @@ abstract class PokemonBuilder {
 
         System.out.println("Enter Pokemon Name");
         pokemonName = myObj.nextLine();
+
+        System.out.println("Enter Pokemon Type");
+        pokemonType = myObj.nextLine();
 
         System.out.println("Enter Pokemon HP (Health Points)");
         pokemonHp = myObj.nextInt();
@@ -24,7 +28,7 @@ abstract class PokemonBuilder {
         System.out.println("Enter Pokemon Speed");
         pokemonSpd = myObj.nextInt();
 
-        ConcretePokemon newPokemon = new ConcretePokemon(pokemonName, new Stats(pokemonHp, pokemonAtk, pokemonDef, pokemonSpd));
+        ConcretePokemon newPokemon = new ConcretePokemon(pokemonName, new ConcreteType(pokemonType), new Stats(pokemonHp, pokemonAtk, pokemonDef, pokemonSpd));
         return newPokemon;
     }
 }
