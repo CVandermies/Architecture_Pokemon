@@ -1,7 +1,6 @@
 package com.company;
 
-public class Fight extends TypeBuilder
-{
+public class Fight extends TypeBuilder  {
     static public String winner;
     static private ConcretePokemon first;
     static private ConcretePokemon second;
@@ -47,7 +46,9 @@ public class Fight extends TypeBuilder
             if (second.hp>0){
                 attack(second, first);
             }
-
+            if (pokemon1.atk==0 & pokemon2.atk==0){
+                return "Both attacks = 0, this fight will last forever and ever and ever ...";
+            }
         }
         if (pokemon2.hp<=0) {
             return pokemon1.name;
