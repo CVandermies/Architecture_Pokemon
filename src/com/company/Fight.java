@@ -5,6 +5,7 @@ public class Fight extends TypeBuilder  {
     static private ConcretePokemon first;
     static private ConcretePokemon second;
     static private int headsOrTails;
+    static private int i;
 
     static double bonus(ConcretePokemon pokemon1, ConcretePokemon pokemon2) {
         return affinities.get(pokemon1.type.name).get(pokemon2.type.name);
@@ -16,10 +17,14 @@ public class Fight extends TypeBuilder  {
             if(step>0){
                 pokemon2.hp = pokemon2.hp - step;
             }
+            else{
+                pokemon2.hp = pokemon2.hp + step;
+            }
         }
     }
 
     static String winner(ConcretePokemon pokemon1, ConcretePokemon pokemon2) {
+        i = 1;
         while (pokemon1.hp > 0 & pokemon2.hp > 0) {
             if (pokemon1.spd > pokemon2.spd) {
                 first = pokemon1;
@@ -42,10 +47,14 @@ public class Fight extends TypeBuilder  {
                     second = pokemon1;
                 }
             }
+            System.out.println("\nTurn #" + i);
             attack(first, second);
+            System.out.println(first.name + " attacks → HP " + second.name + " = " + second.hp);
             if (second.hp>0){
                 attack(second, first);
             }
+            System.out.println(second.name + " attacks → HP " + first.name + " = " + first.hp);
+            i += 1;
             if (pokemon1.atk==0 & pokemon2.atk==0){
                 return "Both attacks = 0, this fight will last forever and ever and ever ...";
             }
