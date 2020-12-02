@@ -27,7 +27,6 @@ abstract class PokemonBuilder {
         System.out.println("Enter Pokemon Speed");
         pokemonSpd = myObj.nextInt();
 
-        ConcretePokemon newPokemon = new ConcretePokemon(pokemonName, new ConcreteType(pokemonType), new Stats(pokemonHp, pokemonAtk, pokemonDef, pokemonSpd));
-        return newPokemon;
+        return new ConcretePokemon(pokemonName, new ConcreteType(pokemonType), new Stats(pokemonHp, pokemonAtk, pokemonDef, pokemonSpd));
     }
 }
