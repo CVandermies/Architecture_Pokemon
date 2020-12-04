@@ -3,7 +3,7 @@ package com.company;
 import java.io.*;
 
 public class Pokedex {
-    static String path = "D:\\Bureau\\pokedex.txt";
+    static String path = ".\\.\\docs\\pokedex.txt";
 
     static void pokedex() throws Exception {
         File file = new File(path);
