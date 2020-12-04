@@ -3,8 +3,10 @@ package com.company;
 import static java.lang.System.out;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         while (true) {
+            Pokedex.pokedex();
+
             out.println("\nWelcome to the Pokemon Arena !");
             out.println("Please, create 2 Pokemons and make them fight");
             out.println("\nPokemon #1");
