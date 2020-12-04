@@ -1,3 +1,2 @@
-pika
-tortank
-boumboum
+Bulbasaur Grass Poison 45 49 49 45
+Ivysaur Grass Poison 60 62 63 60
