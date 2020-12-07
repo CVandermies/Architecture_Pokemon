@@ -29,8 +29,12 @@ public class Pokedex {
                 poke.put("speed", words[6]);
 //            }
             pokemon.add(poke);
+            System.out.println(poke.get("name"));
         }
-        System.out.println(pokemon);
+        for (int i = 0 ; i < pokemon.size() ; i++) {
+            System.out.println(pokemon.get(i));
+        }
+
     }
 }
 

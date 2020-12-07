@@ -8,7 +8,7 @@ public class Main {
             Pokedex.pokedex();
 
             out.println("\nWelcome to the Pokemon Arena !");
-            out.println("Please, create 2 Pokemons and make them fight");
+            out.println("Please, choose 2 Pokemons and make them fight");
             out.println("\nPokemon #1");
             ConcretePokemon pokemon1 = ConcretePokemon.createPokemon();
             out.println("\nPokemon #2");
