@@ -2,53 +2,36 @@ package com.company;
 
 import java.io.*;
 import java.util.*;
-import java.util.Scanner;
 
 public class Pokedex {
     static String path = ".\\.\\docs\\pokedex.txt";
 
-//    static int[][] pokedex = new int[151][9];
-    static ArrayList<HashMap> pokemon = new ArrayList<>();
+    static ArrayList<HashMap> pokedex = new ArrayList<>();
 
-    static void pokedex() throws Exception {
+    static ArrayList<HashMap> pokedex() throws Exception {
         File file = new File(path);
         BufferedReader br = new BufferedReader(new FileReader(file));
         String st;
 
         while ((st = br.readLine()) != null) {
-            HashMap<String, String> poke = new HashMap();
+            HashMap<String, String> characteristics = new HashMap();
             String[] words = st.split(" ");
-
-//            for (int i = 0; i < words.length; i++) {
-                poke.put("name", words[0]);
-                poke.put("type1", words[1]);
-                poke.put("type2", words[2]);
-                poke.put("hp", words[3]);
-                poke.put("att", words[4]);
-                poke.put("def", words[5]);
-                poke.put("speed", words[6]);
-//            }
-            pokemon.add(poke);
-            System.out.println(poke.get("name"));
+                characteristics.put("name", words[0]);
+                characteristics.put("type1", words[1]);
+                characteristics.put("type2", words[2]);
+                characteristics.put("hp", words[3]);
+                characteristics.put("att", words[4]);
+                characteristics.put("def", words[5]);
+                characteristics.put("speed", words[6]);
+                pokedex.add(characteristics);
         }
-        for (int i = 0 ; i < pokemon.size() ; i++) {
-            System.out.println(pokemon.get(i));
-        }
-
+        return pokedex;
     }
-}
 
-//public class Pokedex {
-//    static String path = ".\\.\\docs\\pokedex.txt";
-//    File file = new File(path);
-//    Scanner in = new Scanner(file);
-//    while(in.hasNextLine()) {
-//        String currentLine = in.nextLine();
-//        String[] words = currentLine.split(" ");
-//        for(String a : words){
-//            if(a.equals("YourWord")) {
-//                // Do something
-//            }
-//        }
-//    }
-//}
+    static void list() {
+        for (int i = 0; i < pokedex.size() ; i++) {
+            System.out.println(pokedex.get(i));
+        }
+    }
+
+}
