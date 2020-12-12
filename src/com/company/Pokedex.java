@@ -6,24 +6,21 @@ import java.util.*;
 public class Pokedex {
     static String path = ".\\.\\docs\\pokedex.txt";
 
-    static ArrayList<HashMap> pokedex = new ArrayList<>();
-
-    static ArrayList<HashMap> pokedex() throws Exception {
+    static ArrayList<LinkedHashMap> pokedex = new ArrayList<>();
+    static List<String> characteristics = new ArrayList<>();
+    static ArrayList<LinkedHashMap> pokedex() throws Exception {
         File file = new File(path);
         BufferedReader br = new BufferedReader(new FileReader(file));
         String st;
+        characteristics.addAll(Arrays.asList("name", "type1", "type2", "hp", "att", "def", "speed"));
 
         while ((st = br.readLine()) != null) {
-            HashMap<String, String> characteristics = new HashMap();
+            LinkedHashMap<String, String> pokemons = new LinkedHashMap();
             String[] words = st.split(" ");
-                characteristics.put("name", words[0]);
-                characteristics.put("type1", words[1]);
-                characteristics.put("type2", words[2]);
-                characteristics.put("hp", words[3]);
-                characteristics.put("att", words[4]);
-                characteristics.put("def", words[5]);
-                characteristics.put("speed", words[6]);
-                pokedex.add(characteristics);
+            for (int i = 0 ; i < characteristics.size() ; i++) {
+                pokemons.put(characteristics.get(i), words[i]);
+            }
+            pokedex.add(pokemons);
         }
         return pokedex;
     }

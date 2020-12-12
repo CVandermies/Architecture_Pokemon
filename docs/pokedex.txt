@@ -1,2 +1,6 @@
 Bulbasaur Grass Poison 45 49 49 45
 Ivysaur Grass Poison 60 62 63 60
+Venusaur Grass Poison 80 82 83 80
+Charmander Fire  39 52 43 65
+Charmeleon Fire  58 64 58 80
+Charizard Fire Flying 78 84 78 100
