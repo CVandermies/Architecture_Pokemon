@@ -18,4 +18,5 @@ public class ConcretePokemon extends PokemonBuilder {
         this.def = stats.def;
         this.spd = stats.spd;
     }
+
 }

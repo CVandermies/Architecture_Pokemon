@@ -12,4 +12,5 @@ public class Stats {
         this.def = def;
         this.spd = spd;
     }
+
 }

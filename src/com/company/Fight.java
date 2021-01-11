@@ -12,8 +12,10 @@ public class Fight extends TypeBuilder {
     static void attack(ConcretePokemon pokemon1, ConcretePokemon pokemon2) {
         String attack;
         double bonus;
+
         int press = 1;
         Scanner myObj = new Scanner(System.in);
+
         System.out.println("\nChoose attack");
         if (pokemon1.type2.name != "") {
             System.out.println("1 for : " + pokemon1.type1.name + " attack");
@@ -62,7 +64,11 @@ public class Fight extends TypeBuilder {
 
     static String winner(ConcretePokemon pokemon1, ConcretePokemon pokemon2) {
         i = 1;
-        while (pokemon1.hp > 0 & pokemon2.hp > 0) {
+
+        while ((pokemon1.hp > 0) && (pokemon2.hp > 0)) {
+            if (pokemon1.atk==0 & pokemon2.atk==0) {
+                return "Both attacks = 0, this fight will last forever and ever and ever ...";
+            }
             if (pokemon1.spd > pokemon2.spd) {
                 first = pokemon1;
                 second = pokemon2;
@@ -90,9 +96,6 @@ public class Fight extends TypeBuilder {
             }
             System.out.println(second.name + " attacks → HP " + first.name + " = " + first.hp);
             i += 1;
-            if (pokemon1.atk==0 & pokemon2.atk==0) {
-                return "Both attacks = 0, this fight will last forever and ever and ever ...";
-            }
         }
         if (pokemon2.hp<=0) {
             return pokemon1.name;

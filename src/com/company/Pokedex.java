@@ -8,10 +8,12 @@ public class Pokedex {
 
     static ArrayList<LinkedHashMap> pokedex = new ArrayList<>();
     static List<String> characteristics = new ArrayList<>();
+
     static ArrayList<LinkedHashMap> pokedex() throws Exception {
         File file = new File(path);
         BufferedReader br = new BufferedReader(new FileReader(file));
         String st;
+
         characteristics.addAll(Arrays.asList("name", "type1", "type2", "hp", "att", "def", "speed"));
 
         while ((st = br.readLine()) != null) {
@@ -24,11 +26,5 @@ public class Pokedex {
         }
         return pokedex;
     }
-
-//    static void list() {
-//        for (int i = 0; i < pokedex.size() ; i++) {
-//            System.out.println(pokedex.get(i));
-//        }
-//    }
 
 }
