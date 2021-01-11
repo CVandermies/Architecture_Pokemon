@@ -1,5 +1,7 @@
 package com.company;
 
+import java.util.Scanner;
+
 public class Fight extends TypeBuilder {
     static public String winner;
     static private ConcretePokemon first;
@@ -7,8 +9,43 @@ public class Fight extends TypeBuilder {
     static private int headsOrTails;
     static private int i;
 
+//    static void attack(ConcretePokemon pokemon1, ConcretePokemon pokemon2) {
+//        String attack;
+//        double bonus;
+//        int press = 1;
+//        Scanner myObj = new Scanner(System.in);
+//        System.out.println("\nChoose attack");
+//        if (pokemon1.type2.name != "") {
+//            System.out.println("1 for : " + pokemon1.type1.name + " attack");
+//            System.out.println("2 for : " + pokemon1.type2.name + " attack");
+//        }
+//        else {
+//            System.out.println("1 for : " + pokemon1.type1.name);
+//        }
+//        press = myObj.nextInt();
+//        if (press == 1) {
+//            attack = pokemon1.type1.name;
+//        }
+//        else {
+//            attack = pokemon1.type2.name;
+//        }
+//        bonus = affinities.get(attack).get(pokemon2.type1.name);
+//        if (pokemon2.type2.name != "") {
+//            bonus *= affinities.get(attack).get(pokemon2.type2.name);
+//        }
+//        if (pokemon1.atk!=0 & pokemon1.hp!=0) {
+//            int step = (int) (bonus*pokemon1.atk - pokemon2.def);
+//            if (step>0) {
+//                pokemon2.hp = pokemon2.hp - step;
+//            }
+//            else {
+//                pokemon2.hp = pokemon2.hp + step;
+//            }
+//        }
+//    }
+
     static double bonus(ConcretePokemon pokemon1, ConcretePokemon pokemon2) {
-        return affinities.get(pokemon1.type.name).get(pokemon2.type.name);
+        return affinities.get(pokemon1.type1.name).get(pokemon2.type1.name);
     }
 
     static void attack(ConcretePokemon pokemon1, ConcretePokemon pokemon2) {
@@ -65,6 +102,7 @@ public class Fight extends TypeBuilder {
             return pokemon2.name;
         }
     }
+
     Fight(ConcretePokemon pokemon1, ConcretePokemon pokemon2) {
         winner = winner(pokemon1 ,pokemon2);
     }

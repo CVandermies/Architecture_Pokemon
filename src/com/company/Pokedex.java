@@ -25,10 +25,10 @@ public class Pokedex {
         return pokedex;
     }
 
-    static void list() {
-        for (int i = 0; i < pokedex.size() ; i++) {
-            System.out.println(pokedex.get(i));
-        }
-    }
+//    static void list() {
+//        for (int i = 0; i < pokedex.size() ; i++) {
+//            System.out.println(pokedex.get(i));
+//        }
+//    }
 
 }
