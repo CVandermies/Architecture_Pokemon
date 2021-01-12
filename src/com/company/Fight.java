@@ -18,8 +18,8 @@ public class Fight extends TypeBuilder {
 
         System.out.println("\nChoose attack");
         if (pokemon1.type2.name != "") {
-            System.out.println("1 for : " + pokemon1.type1.name + " attack");
-            System.out.println("2 for : " + pokemon1.type2.name + " attack");
+            System.out.println("\"1\" for : " + pokemon1.type1.name + " attack");
+            System.out.println("\"2\" for : " + pokemon1.type2.name + " attack");
         }
         else {
             System.out.println("1 for : " + pokemon1.type1.name);
@@ -73,11 +73,7 @@ public class Fight extends TypeBuilder {
                 first = pokemon1;
                 second = pokemon2;
             }
-            if (pokemon1.spd < pokemon2.spd) {
-                first = pokemon2;
-                second = pokemon1;
-            }
-            if (pokemon1.spd == pokemon2.spd) {
+            else if (pokemon1.spd == pokemon2.spd) {
                 headsOrTails = (int) (Math.random() * (2));
                 if (headsOrTails==0) {
                     first = pokemon1;
@@ -88,13 +84,17 @@ public class Fight extends TypeBuilder {
                     second = pokemon1;
                 }
             }
+            else {
+                first = pokemon2;
+                second = pokemon1;
+            }
             System.out.println("\nTurn #" + i);
             attack(first, second);
             System.out.println(first.name + " attacks → HP " + second.name + " = " + second.hp);
             if (second.hp>0) {
                 attack(second, first);
+                System.out.println(second.name + " attacks → HP " + first.name + " = " + first.hp);
             }
-            System.out.println(second.name + " attacks → HP " + first.name + " = " + first.hp);
             i += 1;
         }
         if (pokemon2.hp<=0) {
