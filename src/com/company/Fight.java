@@ -16,7 +16,7 @@ public class Fight extends TypeBuilder {
         int press = 1;
         Scanner myObj = new Scanner(System.in);
 
-        System.out.println("\nChoose attack");
+        System.out.println("\nChoose attack for " + pokemon1.name);
         if (pokemon1.type2.name != "") {
             System.out.println("\"1\" for : " + pokemon1.type1.name + " attack");
             System.out.println("\"2\" for : " + pokemon1.type2.name + " attack");
