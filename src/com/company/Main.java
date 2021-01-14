@@ -108,10 +108,9 @@ public class Main {
             }
             team2.add(0, team2.get(press-1));
             team2.remove(press);
-
             System.out.println("\nPlayer 2 is sending " + team2.get(0).name);
-            substitute(team1);
         }
+        substitute(team1);
     }
 
     public static void substitute(ArrayList<ConcretePokemon> team1) {
