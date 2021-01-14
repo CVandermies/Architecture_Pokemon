@@ -32,7 +32,7 @@ La documentation se trouve en commentaire dans le code et dans ce fichier README
 
 Application basée sur le design pattern builder.
 
-![alt text](https://github.com/CVandermies/Architecture_Pokemon/blob/master/docs/uml2.png?raw=true)
+![alt text](https://github.com/CVandermies/Architecture_Pokemon/blob/master/docs/parser.png?raw=true)
 
 ### Tableau des types
 
