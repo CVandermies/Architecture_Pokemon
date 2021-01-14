@@ -42,7 +42,6 @@ public class Main {
 
                     System.out.println("\nFight !");
 
-//                    int i = 0;
                     while (!team1.isEmpty() && !team2.isEmpty()) {
                         System.out.println("\nThe winner is : " + Fight.winner(team1.get(i), team2.get(i)));
                         if (Fight.winner(team1.get(i), team2.get(i)) == team1.get(i).name) {
@@ -68,8 +67,8 @@ public class Main {
             }
         }
         catch (Exception e) {
-//            System.out.println("\nYou did not enter a number, please restart");
-            e.printStackTrace();
+            System.out.println("\nYou did not enter a number, please restart");
+//            e.printStackTrace();
         }
     }
 
