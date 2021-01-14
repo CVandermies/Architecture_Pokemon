@@ -9,31 +9,30 @@ VANDERMIES Charles 15123
 
 ## Description 
 
-Cette application ludique a pour objectif de simuler un simple combat entre deux Pokémons possédant leurs propres statistiques et type. 
+Cette application ludique simule un combat entre deux Pokémons possédant leurs propres statistiques et type. Ce jeu textuel se joue dans l'invité de commande.
 
-Basée sur le modèle Builder (design pattern) l'application permettra de créer deux instances de Pokémons possédant un nom, des statistiques particulières (points de vie, puissance d'attaque, défense, vitesse) et un type afin de les faire combattre ensembles. 
+Basée sur le modèle Builder (design pattern) l'application permet de créer deux instances de Pokémons possédant un nom, des statistiques particulières (points de vie, puissance d'attaque, défense, vitesse) et un type afin de les faire combattre ensembles. 
 
-L’application sera un jeu textuel accessible via les lignes de commande. 
 
 
 
 ## Contraintes 
 
-Le programme sera écrit en Java et exécuté sur IntelliJ. Ce dernier nous permettra notamment de mettre en place des tests unitaires. 
+Le programme est écrit en Java sur l'IDE IntelliJ. Ce dernier nous permet notamment de mettre en place des tests unitaires. 
 
-Le développement du jeu suivra une stratégie MVP “Minimum Viable Product”. 
+Le développement du jeu suit une stratégie MVP “Minimum Viable Product”. 
 
  
 
 ## Documentation 
 
-La documentation sera faite en commentaire dans le code et dans ce fichier README (qui sera amené à évoluer). 
+La documentation se trouve en commentaire dans le code et dans ce fichier README. 
 
 ### Diagramme
 
 Application basée sur le design pattern builder.
 
-![alt text](https://github.com/CVandermies/Architecture_Pokemon/blob/master/docs/diagram.jpg?raw=true)
+![alt text](https://github.com/CVandermies/Architecture_Pokemon/blob/master/docs/uml2.png?raw=true)
 
 ### Tableau des types
 
@@ -41,29 +40,14 @@ Le type du Pokemon, ses forces et faiblesses seront basées sur ce tableau de la
 
 ![alt text](https://github.com/CVandermies/Architecture_Pokemon/blob/master/docs/TypeAffinities.png?raw=true)
 
-## Critères de qualité 
-
-### Efficacité 
-
-... 
-
- 
-
-### Évolutivité 
-
-... 
-
- 
-
+##Critères de qualité
+###Efficacité
+Chaque attaque doit s'effectuer instantanément, on ne veut pas de temps de chargement intempestif.
+###Evolutivité
+Il est aisé et rapide de comprendre le code pour le faire évoluer. Si l'utilisateur souhaite rajouter des types de pokemon dans le futur, il trouvera rapidement le moyen de le faire.
 ### Facilité d'utilisation 
-
-... 
-
- 
-
-### Maintenabilité 
-
-… 
+Il est important que le jeu soit simple d'emploi. Les instructions sont expliquées au fur et à mesure de la partie, le "mode d'emploi" est intégré au jeu. 
+Le joueur a accès au pokédex, une liste des Pokemons disponibles où sont reprises leurs caractéristiques. Il ne doit donc pas hardcoder ces valeurs, simplement choisir un pokemon dans la liste.
 
  
 
