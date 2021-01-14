@@ -24,12 +24,16 @@ public class Fight extends TypeBuilder {
         else {
             System.out.println("1 for : " + pokemon1.type1.name);
         }
-        press = myObj.nextInt();
-        if (press == 1) {
-            attack = pokemon1.type1.name;
+        if (pokemon1.type2.name != "") {
+            press = myObj.nextInt();
+            if (press == 1) {
+                attack = pokemon1.type1.name;
+            } else {
+                attack = pokemon1.type2.name;
+            }
         }
-        else {
-            attack = pokemon1.type2.name;
+        else{
+            attack = pokemon1.type1.name;
         }
         bonus = affinities.get(attack).get(pokemon2.type1.name);
         if (pokemon2.type2.name != "") {
