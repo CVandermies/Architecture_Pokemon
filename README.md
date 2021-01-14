@@ -40,13 +40,13 @@ Le type du Pokemon, ses forces et faiblesses seront basées sur ce tableau de la
 
 ![alt text](https://github.com/CVandermies/Architecture_Pokemon/blob/master/docs/TypeAffinities.png?raw=true)
 
-##Critères de qualité
+## Critères de qualité
 
-###Efficacité
+### Efficacité
 
 Chaque attaque doit s'effectuer instantanément, on ne veut pas de temps de chargement intempestif pour que le programme garde son aspect ludique. Nous avons fait en sorte que le joueur ne ressente pas de frustration liée aux temps de chargement ou à un éventuel bug s'il sortait du contexte du code en tapant des valeurs non admissibles. 
 
-###Evolutivité
+### Evolutivité
 
 Il est aisé et rapide de comprendre le code pour le faire évoluer. Si l'utilisateur souhaite rajouter des types de pokemon dans le futur, il trouvera rapidement le moyen de le faire. Nous avons fait attention à éviter la redondance de code pour faciliter les futures modifications.
 
