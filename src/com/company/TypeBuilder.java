@@ -8,7 +8,7 @@ abstract class TypeBuilder {
 
     TypeBuilder() {
         affinity.put("Normal", 1.);
-        affinity.put("Fight", 1.);
+        affinity.put("Fighting", 1.);
         affinity.put("Flying", 1.);
         affinity.put("Poison", 1.);
         affinity.put("Ground", 1.);
@@ -28,21 +28,21 @@ abstract class TypeBuilder {
         affinities.get("Normal").put("Rock", 0.5);
         affinities.get("Normal").put("Ghost", 0.);
 
-        //Fight
-        affinities.put("Fight", (HashMap)affinity.clone());
-        affinities.get("Fight").put("Poison", 0.5);
-        affinities.get("Fight").put("Fying", 0.5);
-        affinities.get("Fight").put("Psychic", 0.5);
-        affinities.get("Fight").put("Bug", 0.5);
-        affinities.get("Fight").put("Normal", 2.);
-        affinities.get("Fight").put("Ice", 2.);
-        affinities.get("Fight").put("Rock", 2.);
-        affinities.get("Fight").put("Ghost", 0.);
+        //Fighting
+        affinities.put("Fighting", (HashMap)affinity.clone());
+        affinities.get("Fighting").put("Poison", 0.5);
+        affinities.get("Fighting").put("Fying", 0.5);
+        affinities.get("Fighting").put("Psychic", 0.5);
+        affinities.get("Fighting").put("Bug", 0.5);
+        affinities.get("Fighting").put("Normal", 2.);
+        affinities.get("Fighting").put("Ice", 2.);
+        affinities.get("Fighting").put("Rock", 2.);
+        affinities.get("Fighting").put("Ghost", 0.);
 
         //Flying
         affinities.put("Flying", (HashMap)affinity.clone());
         affinities.get("Flying").put("Grass", 2.);
-        affinities.get("Flying").put("Fight", 2.);
+        affinities.get("Flying").put("Fighting", 2.);
         affinities.get("Flying").put("Bug", 2.);
         affinities.get("Flying").put("Rock", 0.5);
         affinities.get("Flying").put("Electric", 0.5);
@@ -72,7 +72,7 @@ abstract class TypeBuilder {
         affinities.get("Rock").put("Flying", 2.);
         affinities.get("Rock").put("Bug", 2.);
         affinities.get("Rock").put("Fire", 2.);
-        affinities.get("Rock").put("Fight", 0.5);
+        affinities.get("Rock").put("Fighting", 0.5);
         affinities.get("Rock").put("Ground", 0.5);
 
         //Bug
@@ -81,7 +81,7 @@ abstract class TypeBuilder {
         affinities.get("Bug").put("Poison", 2.);
         affinities.get("Bug").put("Psychic", 2.);
         affinities.get("Bug").put("Fire", 0.5);
-        affinities.get("Bug").put("Fight", 0.5);
+        affinities.get("Bug").put("Fighting", 0.5);
         affinities.get("Bug").put("Flying", 0.5);
         affinities.get("Bug").put("Ghost", 0.5);
 
@@ -134,7 +134,7 @@ abstract class TypeBuilder {
         //Psychic
         affinities.put("Psychic", (HashMap)affinity.clone());
         affinities.get("Psychic").put("Poison", 2.);
-        affinities.get("Psychic").put("Fight", 2.);
+        affinities.get("Psychic").put("Fighting", 2.);
         affinities.get("Psychic").put("Psychic", 0.5);
 
         //Ice

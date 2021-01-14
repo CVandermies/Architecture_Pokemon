@@ -1,5 +1,6 @@
 package com.company;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 abstract class PokemonBuilder {
@@ -17,9 +18,20 @@ abstract class PokemonBuilder {
         Scanner myObj = new Scanner(System.in);
         pokemonName = myObj.nextLine();
 
-        for (int i = 0 ; i < Pokedex.pokedex.size() ; i++) {
-            if (Pokedex.pokedex.get(i).containsValue(pokemonName)) {
-                Object[] toArray = Pokedex.pokedex.get(i).values().toArray();
+        // List to check if Pokemon wanted by the user exists
+        ArrayList<String> pokemons = new ArrayList<>();
+        for (int j = 0 ; j < Pokedex.pokedex.size() ; j++) {
+            pokemons.add(Pokedex.pokedex.get(j).values().toArray()[0].toString());
+        }
+
+        while (!pokemons.contains(pokemonName)) {
+            System.out.println("This Pokemon does not exist, please retry");
+            pokemonName = myObj.nextLine();
+        }
+
+        for (int j = 0 ; j < Pokedex.pokedex.size() ; j++) {
+            if (Pokedex.pokedex.get(j).containsValue(pokemonName)) {
+                Object[] toArray = Pokedex.pokedex.get(j).values().toArray();
                 pokemonType1 = toArray[1].toString();
                 pokemonType2 = toArray[2].toString();
                 pokemonHp = Integer.parseInt(toArray[3].toString());
