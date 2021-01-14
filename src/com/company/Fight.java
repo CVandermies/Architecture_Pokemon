@@ -21,21 +21,17 @@ public class Fight extends TypeBuilder {
                 System.out.println("\nYou must enter \"1\" or \"2\", please retry");
                 press = myObj.nextInt();
             }
-        }
-        else {
-            System.out.println("\"1\" for : " + pokemon1.type1.name + " attack");
-            press = myObj.nextInt();
-            while (press != 1) {
-                System.out.println("\nYou must enter \"1\", please retry");
-                press = myObj.nextInt();
+            if (press == 1) {
+                attack = pokemon1.type1.name;
+            }
+            else {
+                attack = pokemon1.type2.name;
             }
         }
-        if (press == 1) {
+        else {
             attack = pokemon1.type1.name;
         }
-        else {
-            attack = pokemon1.type2.name;
-        }
+
         bonus = affinities.get(attack).get(pokemon2.type1.name);
         if (pokemon2.type2.name != "") {
             bonus *= affinities.get(attack).get(pokemon2.type2.name);

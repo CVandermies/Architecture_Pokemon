@@ -10,7 +10,6 @@ public class FightTest {
         ConcretePokemon squirtle = new ConcretePokemon("Squirtle", new ConcreteType("Water"), new ConcreteType(""), new Stats(50,48,65,43));
         ConcretePokemon pikachu = new ConcretePokemon("Pikachu", new ConcreteType("Electric"),new ConcreteType(""), new Stats(35,55,40,90));
         Fight.attack(pikachu, squirtle);
-
         assertEquals(35, pikachu.hp);
     }
 
@@ -41,9 +40,9 @@ public class FightTest {
     @Test
     public void Bonus() {
         ConcretePokemon pokemon1 = new ConcretePokemon("Charles", new ConcreteType("Normal"), new ConcreteType(""), new Stats(35,50,30,11));
-        ConcretePokemon pokemon2 = new ConcretePokemon("Math", new ConcreteType("Fight"), new ConcreteType(""), new Stats(35,50,30,10));
+        ConcretePokemon pokemon2 = new ConcretePokemon("Math", new ConcreteType("Fighting"), new ConcreteType(""), new Stats(35,50,30,10));
         assertEquals("Math", Fight.winner(pokemon1, pokemon2));
-        ConcretePokemon pokemon3 = new ConcretePokemon("Charles", new ConcreteType("Fight"), new ConcreteType(""), new Stats(35,50,30,10));
+        ConcretePokemon pokemon3 = new ConcretePokemon("Charles", new ConcreteType("Fighting"), new ConcreteType(""), new Stats(35,50,30,10));
         ConcretePokemon pokemon4 = new ConcretePokemon("Math", new ConcreteType("Normal"), new ConcreteType(""), new Stats(35,50,30,11));
         assertEquals("Charles", Fight.winner(pokemon3, pokemon4));
     }

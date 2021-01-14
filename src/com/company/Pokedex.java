@@ -4,7 +4,7 @@ import java.io.*;
 import java.util.*;
 
 public class Pokedex {
-    static String path = ".\\.\\docs\\pokedexfull.txt";
+    static String path = ".\\.\\docs\\pokedex.txt";
 
     static ArrayList<LinkedHashMap> pokedex = new ArrayList<>();
     static List<String> characteristics = new ArrayList<>();
